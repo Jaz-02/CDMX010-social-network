@@ -22,32 +22,31 @@ export const loginTemplate = (target) => {
         </div>
         `;
 
-        target.innerHTML = html
+  target.innerHTML = html
 
+  document.getElementById('access').addEventListener('click', (e) => {
+    e.preventDefault();
+    const emailSignIn = document.getElementById("emailSignIn").value
+    console.log(emailSignIn);
+    const passwordSignIn = document.getElementById("passwordSignIn").value;
+    signIn(emailSignIn, passwordSignIn);
+    console.log("este usuario si pudo ingresar");
+  });
 
-        document.getElementById('access').addEventListener('click', (e) => {
-          e.preventDefault();
-          const emailSignIn = document.getElementById("emailSignIn").value
-             console.log(emailSignIn);
-            const passwordSignIn = document.getElementById("passwordSignIn").value;
-            signIn(emailSignIn, passwordSignIn);
-                console.log("este usuario si pudo ingresar");
-        });
+  document.getElementById('newAccountLink').addEventListener('click', (e) => {
+    e.preventDefault();
+    onNavigate('/register')
+  });
 
-        document.getElementById('newAccountLink').addEventListener('click', (e) => {
-          e.preventDefault();
-          onNavigate('/register')
-        });
-        
-//         const access = document.getElementById("access");
-//          access.addEventListener("click", () => { 
+  //         const access = document.getElementById("access");
+  //          access.addEventListener("click", () => { 
 
-//             const emailSignIn = document.getElementById("emailSignIn").value
-//              console.log(emailSignIn);
-//             const passwordSignIn = document.getElementById("passwordSignIn").value;
-//             signIn(emailSignIn, passwordSignIn);
-//                 console.log("este usuario si pudo ingresar");
-//  });
+  //             const emailSignIn = document.getElementById("emailSignIn").value
+  //              console.log(emailSignIn);
+  //             const passwordSignIn = document.getElementById("passwordSignIn").value;
+  //             signIn(emailSignIn, passwordSignIn);
+  //                 console.log("este usuario si pudo ingresar");
+  //  });
 
 // firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
 //   .then(() => {
@@ -66,4 +65,3 @@ export const loginTemplate = (target) => {
 //     console.log(errorMessage)
 //   });
 };
-

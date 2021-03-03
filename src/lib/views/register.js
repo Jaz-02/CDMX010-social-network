@@ -9,6 +9,7 @@ export const registerTemplate = (target) =>{
     </div>
     <div class="bottom-register">
       <div class="submit">
+      
         <input class="input" type="text" placeholder="Name" style="text-align: center">
         <input class="input" type="text" placeholder="Last Name" style="text-align: center">
         <input class="input" type="text" placeholder="User" style="text-align: center">
@@ -21,19 +22,16 @@ export const registerTemplate = (target) =>{
       </div>
     </div>
       `;
+      target.innerHTML = registerContent;
+  const register = document.getElementById("register");
+  // document.getElementById('newAccountLink').addEventListener('click', (e) => {
+  //   e.preventDefault();
+  //   onNavigate('/register')
+  // });
 
-    target.innerHTML = registerContent;
-    
-    const register = document.getElementById("register");
-    // document.getElementById('newAccountLink').addEventListener('click', (e) => {
-    //   e.preventDefault();
-    //   onNavigate('/register')
-    // });
-
-    register.addEventListener("click", () => { 
-        let email = document.getElementById("email").value;
-        let password = document.getElementById("password").value;
-        registration(email, password);
-});
+  register.addEventListener("click", () => { 
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    registration(email, password);
+  });
 };
-

@@ -15,6 +15,7 @@ export const homeTemplate = async (target) => {
     <div>
     <form id = "post-form">
     <div>
+    <img id = "img" alt="user" src= "img/foto-perfil/perfil.png">
     <textarea id = "post-title" autofocus>
     </textarea>
     </div>
@@ -33,19 +34,18 @@ export const homeTemplate = async (target) => {
   
         target.innerHTML = html
   // }
-        const postForm = document.getElementById("post-form");
-        const postContainer = document.getElementById("postConteiner");
-          
-          const querySnapshot = await getPost();
-          // console.log(querySnapshot)
-          const posts = []
-          querySnapshot.forEach(doc => {
-            // console.log(doc.data())
-            const post = doc.data();
-            posts.push(post);
-          });
+  const postForm = document.getElementById("post-form");
+  const postContainer = document.getElementById("postConteiner");
+  const querySnapshot = await getPost();
+  // console.log(querySnapshot)
+  const posts = []
+  querySnapshot.forEach(doc => {
+    // console.log(doc.data())
+    const post = doc.data();
+    posts.push(post);
+  });
 
-          postContainer.innerHTML = posts.map(post => `
+  postContainer.innerHTML = posts.map(post => `
         <div id= "postContainer">
           <div id = "btnContenedor" class="btnContenedor">
             <p id = "btn">...</p>
@@ -61,20 +61,18 @@ export const homeTemplate = async (target) => {
         </div>
         `).join('');
 
-        postForm.addEventListener("submit", async (e) => {
-          e.preventDefault();
-          const title = postForm["post-title"];
-          // console.log(title.value);
-          const postDescription = postForm["post-description"];
-          // console.log(postDescription.value);
-          await savePost (title.value, postDescription.value);
-          title.focus();
-        });
+  postForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const title = postForm["post-title"];
+    // console.log(title.value);
+    const postDescription = postForm["post-description"];
+    // console.log(postDescription.value);
+    await savePost (title.value, postDescription.value);
+    title.focus();
+  });
 
-        const signOff = document.getElementById("signOutBtn");
-        signOff.addEventListener("click", ()  => {
-          signOut()
-        });
-        };
-      
-        
+  const signOff = document.getElementById("signOutBtn");
+  signOff.addEventListener("click", ()  => {
+    signOut()
+  });
+};
