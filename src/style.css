@@ -385,6 +385,11 @@
         align-self: flex-end;
 
       } */
+
+      #img {
+border-radius: 50%;
+
+      }
     
   
   

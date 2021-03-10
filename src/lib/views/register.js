@@ -24,14 +24,15 @@ export const registerTemplate = (target) =>{
       `;
       target.innerHTML = registerContent;
   const register = document.getElementById("register");
-  // document.getElementById('newAccountLink').addEventListener('click', (e) => {
-  //   e.preventDefault();
-  //   onNavigate('/register')
-  // });
+  document.getElementById('newAccountLink').addEventListener('click', (e) => {
+    e.preventDefault();
+    onNavigate('/home')
+  });
 
   register.addEventListener("click", () => { 
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
     registration(email, password);
+    
   });
 };
