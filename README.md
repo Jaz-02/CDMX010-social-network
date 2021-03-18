@@ -1,5 +1,4 @@
 ### Documentación de bocetos y referncias
-
 <img src=“src/img/RS-00.png” width=“1000" height=“515”/>
 <img src=“src/img/RS-01.png” width=“1000” height=“1281"/>
 <img src=“src/img/RS-02.png” width=“462" height=“1000”/>
