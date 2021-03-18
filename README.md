@@ -1,8 +1,8 @@
 ### Documentación de bocetos y referncias
-<img src=“src/img/RS-00.png” width=“1000" height=“515”/>
-<img src=“src/img/RS-01.png” width=“1000” height=“1281"/>
-<img src=“src/img/RS-02.png” width=“462" height=“1000”/>
-<img src=“src/img/RS-03.png” width=“1000” height=“552"/>
+<img src='src/img/RS-00.jpg' width='1000' height='515'/>
+<img src='src/img/RS-01.jpg' width='1000' height='1281'/>
+<img src='src/img/RS-02.jpg' width='462' height='1000'/>
+<img src='src/img/RS-03.jpg' width='1000' height='552'/>
 
 # Creando una Red Social
 
